@@ -14,6 +14,7 @@ import 'vuejs-dialog/dist/vuejs-dialog.min.css';
 import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 import 'font-awesome/css/font-awesome.css';
 
+
 Vue.use(VueProgressBar, {
   color: '#1dcaff',
   failedColor: 'red',
