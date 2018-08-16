@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+#app {
+  background-color: #fff;
+  color: #455a64;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 0 10px #ccc;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.inpt-boxs {
+  border: 0;
+  background-color: transparent;
+  box-shadow: none !important;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+}
+
+.pos_r {
+  position: relative;
+}
+
+.edit_client {
+  position: absolute;
+  bottom: 10px;
+  background-color: #1dcaff;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 6px 10px;
+  display: none;
+}
+
+.blogs:hover .edit_client {
+  display: block;
+}
+
+.del_client {
+  position: absolute;
+  bottom: 10px;
+  background-color: #1dcaff;
+  right: 50px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.blogs:hover .del_client {
+  display: block;
+}
+
+.mtb-150 {
+  margin: 150px auto 40px auto;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mtb-36 {
+  margin: 36px 0;
+}
+
+.fw-100 {
+  font-weight: 100 !important;
+}
+
+.fb:hover, .fb-icon {
+  color: #3b5998 !important;
+}
+
+.google:hover, .google-icon {
+  color: #d34836 !important;
+}
+
+.twitter:hover, .twitter-icon {
+  color: #1dcaff !important;
+}
+
+.dg-open .dg-btn--cancel {
+  color: #fff;
+  background-color: #1dcaff;
+}
+
+.dg-open .dg-btn--ok {
+  color: #1dcaff;
+  background-color: #fff;
+  border-color: #1dcaff;
+}
+
+.white-color {
+  color: #fff;
+}
+
+.gray-color {
+  color: gray;
+}
+
+.blogs {
+  background-color: #eee;
+  padding: 20px;
+  border-top: 4px solid #ccc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.user-img {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100%;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+
+.f-name {
+  font-weight: 300;
+  font-size: 32px;
+  margin: 0;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.anchor {
+  text-decoration: none !important;
+  color: #455a64 !important;
+}
+
+.search-field {
+  border: none;
+  border-bottom: 1px solid #eee;
+  box-shadow: none;
+  border-radius: 0;
+  padding-left: 45px;
+}
+
+.search-icon {
+  position: absolute;
+  color: #eee;
+  margin: 0 10px;
+  top: 15px;
+}
+
+footer {
+  padding: 20px 0;
+  background-color: #1a1a1a;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.preview {
+  width: 80px;
+  height: 80px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to
+/* .fade-leave-active below version 2.1.8 */
+
+  {
+  opacity: 0;
+}
