@@ -57,7 +57,7 @@ export default {
       this.$v.$touch();
       if(!this.$v.$invalid){
       this.$Progress.start();
-      this.$http.post('http://localhost:3001/api/Login', {
+      this.$http.post('http://localhost:3001/api/login', {
         userName: this.userLogin.userName,
         userPass: this.userLogin.userPass,
 
