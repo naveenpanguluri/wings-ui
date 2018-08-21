@@ -5,7 +5,7 @@
     <div class="logo text-center">
       <img src="../assets/logo.png" class="img-responsive">
     </div>
-    <h3 class="fw-200 text-center">Member Login</h3>
+    <h3 class="fw-200 text-center">Wings Registration</h3>
     <div class="form-group">
       <input type="text" class="form-control inpt-box" placeholder="Email address" v-model="userLogin.userName">
     </div>
@@ -13,9 +13,8 @@
       <input type="password" class="form-control inpt-box" placeholder="Password" v-model="userLogin.userPass">
     </div>
     <div class="clearfix mtb-32">
-      <button type="button" class="btn btn-cls pull-right" v-on:click.prevent="SignInUser">Login</button><router-link to="/register" class="anchor"><button type="button" class="btn btn-cls pull-left">Register</button></router-link>
+      <router-link to="/" class="anchor"><button type="button" class="btn btn-cls pull-left">Login</button></router-link><button type="button" v-on:click.prevent="SignInUser" class="btn btn-cls pull-right">Register</button>
     </div>
-    <span class="clr1 pull-right"><a href="#" class="forgot clr2">forgot password?</a></span>
 
   </div>
 
@@ -66,7 +65,7 @@ export default {
       this.$v.$touch();
       if (!this.$v.$invalid) {
         this.$Progress.start();
-        this.$http.post('http://localhost:3001/api/login', {
+        this.$http.post('http://localhost:3001/api/registerUser', {
           userName: this.userLogin.userName,
           userPass: this.userLogin.userPass,
 

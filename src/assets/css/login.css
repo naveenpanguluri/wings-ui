@@ -24,7 +24,7 @@ body {
   position: absolute;
   margin: auto;
   width: 344px;
-  height: 350px;
+  height: 390px;
   /*background-color: #eee;*/
 }
 
@@ -70,7 +70,7 @@ body {
   right: 20px;
 }
 .forgot{
-font-weight: 200; 
+font-weight: 200;
 }
 .forgot:hover{
   text-decoration: none;

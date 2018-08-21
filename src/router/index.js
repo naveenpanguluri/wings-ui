@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Home from '../pages/Home';
 import Blogs from '../pages/Blogs';
 import Login from '../pages/Login';
+import Register from '../pages/Register';
 import Contact from '../pages/Contact';
 import EditBlogs from '../pages/EditBlogs';
 
@@ -19,6 +20,11 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home,
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register,
     },
     {
       path: '/',
