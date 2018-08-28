@@ -19,7 +19,7 @@
                   <router-link to="/contact" class="anchor">{{ Contact }}</router-link>
                 </li>
                 <li>
-                  <router-link to="/" class="anchor"><i class="fa fa-sign-out gray-color"></i></router-link>
+                  <a href="#"><i class="fa fa-sign-out gray-color" v-on:click.prevent="signOut"></i></a>
                 </li>
               </ul>
             </div>
@@ -29,12 +29,32 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
   name: 'Header',
   data () {
     return {
       Contact: 'Contact Us'
     }
+  },
+  methods:{
+    ...mapActions([
+      'setStateVal',
+    ]),
+
+    signOut: function(){
+      this.setStateVal({
+        accessToken: ''
+      });
+      console.log('signout', this.getStateVal.accessToken);
+      this.$router.push('/');
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'getStateVal',
+    ]),
   }
 }
 </script>

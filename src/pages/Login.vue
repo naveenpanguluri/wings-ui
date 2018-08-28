@@ -13,7 +13,8 @@
       <input type="password" class="form-control inpt-box" placeholder="Password" v-model="userLogin.userPass">
     </div>
     <div class="clearfix mtb-32">
-      <button type="button" class="btn btn-cls pull-right" v-on:click.prevent="SignInUser">Login</button><router-link to="/register" class="anchor"><button type="button" class="btn btn-cls pull-left">Register</button></router-link>
+      <button type="button" class="btn btn-cls pull-right" v-on:click.prevent="SignInUser">Login</button>
+      <router-link to="/register" class="anchor"><button type="button" class="btn btn-cls pull-left">Register</button></router-link>
     </div>
     <span class="clr1 pull-right"><a href="#" class="forgot clr2">forgot password?</a></span>
 
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 import {
   required,
   minLength,
@@ -62,6 +64,10 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'setStateVal',
+    ]),
+
     SignInUser: function() {
       this.$v.$touch();
       if (!this.$v.$invalid) {
@@ -72,7 +78,14 @@ export default {
 
         }).then(function(userLogindata) {
           console.log('userLogindata', userLogindata);
+          // console.log('token', userLogindata.body.accessToken);
+          this.setStateVal({
+            accessToken:userLogindata.body.accessToken
+          });
+          console.log('login', this.getStateVal.accessToken);
+          this.$router.push('/home');
           this.$Progress.finish();
+          return false;
         }).catch(function(error) {
           console.log('error', error);
           this.$Progress.fail();
@@ -87,7 +100,9 @@ export default {
   },
 
   computed: {
-
+    ...mapGetters([
+      'getStateVal',
+    ]),
   }
 
 }

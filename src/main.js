@@ -9,6 +9,7 @@ import Vuelidate from 'vuelidate';
 import JsonExcel from 'vue-json-excel';
 import XLSX from 'xlsx';
 import router from './router';
+import store from './store/store';
 
 import 'vuejs-dialog/dist/vuejs-dialog.min.css';
 import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
@@ -32,6 +33,7 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 });

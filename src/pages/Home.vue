@@ -373,7 +373,6 @@ export default {
 
   mounted: function(){
     this.$http.get('http://localhost:3001/api/clients').then(function(exceldata) {
-      console.log('NewExcelData', exceldata);
       this.json_data = exceldata.body;
     });
   }
